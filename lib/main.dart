@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_blog/core/theme/theme.dart';
 import 'package:flutter_blog/pages/Signup_pages.dart';
 
 void main() {
@@ -14,11 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Talal Blog App Demo',
-      theme: ThemeData(
-        
-      ),
-
-      home: SignUpPage());
+      theme: AppTheme.darkThemeMode,
+      home: const SignUpPage());
   }
 }
 
