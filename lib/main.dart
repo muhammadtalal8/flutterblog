@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Talal Blog App Demo',
       theme: AppTheme.darkThemeMode,
-      home: const SignUpPage());
+      home:  SignUpPage());
   }
 }
 
