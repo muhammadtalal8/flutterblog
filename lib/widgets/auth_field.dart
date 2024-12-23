@@ -8,7 +8,6 @@ class AuthField extends StatelessWidget {
   Widget build(BuildContext context) {
     return  TextFormField(
       decoration: InputDecoration(hintText: hintText),
-      
     );
   }
 }
