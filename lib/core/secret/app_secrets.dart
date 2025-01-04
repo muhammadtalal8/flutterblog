@@ -1,4 +1,3 @@
-
 class AppSecrets {
   static const supabaseUrl = "https://ovzzwqfxguhqnlkpsggy.supabase.co";
   static const supabaseAnonKey =
