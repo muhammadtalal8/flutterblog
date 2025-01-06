@@ -20,10 +20,11 @@ void main() async {
     providers: [
       BlocProvider(
           create: (_) => AuthBloc(
-                  userSignUp:
-                      UserSignUp(AuthRepositoryImpl(AuthRemoteDataSourceImpl(
+                  userSignUp: UserSignUp(
+                    AuthRepositoryImpl(
+                      AuthRemoteDataSourceImpl(
                 supabase.client,
-              ), remoteDataSource: null))))
+              ),))))
     ],
     child: const MyApp(),
   ));
