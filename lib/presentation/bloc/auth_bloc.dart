@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_blog/core/theme/error/failure.dart';
 import 'package:flutter_blog/domain/usecases/user_sign_up.dart';
 
 part 'auth_event.dart';
