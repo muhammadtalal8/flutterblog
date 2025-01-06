@@ -1,7 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/theme/app_pallete.dart';
+import 'package:flutter_blog/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog/presentation/pages/login_page.dart';
 import 'package:flutter_blog/presentation/widgets/auth_field.dart';
 import 'package:flutter_blog/presentation/widgets/auth_gradient_button.dart';
@@ -31,7 +33,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Form(
@@ -60,8 +62,16 @@ appBar: AppBar(),
                 isObscureText: true,
               ),
               const SizedBox(height: 15),
-              const AuthGradientButton(
+              AuthGradientButton(
                 buttonText: 'Sign Up',
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    context.read<AuthBloc>().add(AuthSignUp(
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim(),
+                        name: nameController.text.trim()));
+                  }
+                },
               ),
               const SizedBox(height: 15),
               GestureDetector(
