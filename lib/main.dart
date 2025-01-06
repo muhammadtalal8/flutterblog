@@ -17,15 +17,19 @@ void main() async {
     anonKey: AppSecrets.supabaseAnonKey,
   );
   runApp(MultiBlocProvider(
-    providers:  [
-BlocProvider(create: (_)=> AuthBloc(userSignUp: UserSignUp(AuthRepositoryImpl(AuthRemoteDataSourceImpl(supabase.client), remoteDataSource: re))))
+    providers: [
+      BlocProvider(
+          create: (_) => AuthBloc(
+                  userSignUp:
+                      UserSignUp(AuthRepositoryImpl(AuthRemoteDataSourceImpl(
+                supabase.client,
+              ), remoteDataSource: null))))
     ],
     child: const MyApp(),
   ));
 }
 
-UserSignUp(AuthRepositoryImpl authRepositoryImpl) {
-}
+UserSignUp(AuthRepositoryImpl authRepositoryImpl) {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
