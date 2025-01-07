@@ -37,20 +37,20 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const Text(
                 "Sign In",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               AuthField(
                 hintText: "Email",
                 controller: emailController,
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               AuthField(
                 hintText: "Password",
                 controller: passwordController,
                 isObscureText: true,
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 10),
                AuthGradientButton(
 
                 buttonText: 'Sign In',
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                 
               },
               ),
-              const SizedBox(height: 159),
+              const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
                   Navigator.push(

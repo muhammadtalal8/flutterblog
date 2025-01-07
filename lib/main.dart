@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/secret/app_secrets.dart';
@@ -19,12 +18,16 @@ void main() async {
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider(
-          create: (_) => AuthBloc(
-                  userSignUp: UserSignup(
-                    AuthRepositoryImpl(
-                      AuthRemoteDataSourceImpl(
+        create: (_) => AuthBloc(
+          userSignUp: UserSignup(
+            AuthRepositoryImpl(
+              AuthRemoteDataSourceImpl(
                 supabase.client,
-              ),))))
+              ),
+            ),
+          ),
+        ),
+      ),
     ],
     child: const MyApp(),
   ));

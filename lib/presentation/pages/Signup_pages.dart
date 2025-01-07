@@ -35,7 +35,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10.0),
         child: Form(
           key: formKey,
           child: Column(
@@ -43,25 +43,25 @@ class _SignUpPageState extends State<SignUpPage> {
             children: [
               const Text(
                 "Sign Up",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 15),
               AuthField(
                 hintText: "Name",
                 controller: nameController,
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 6),
               AuthField(
                 hintText: "Email",
                 controller: emailController,
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 6),
               AuthField(
                 hintText: "Password",
                 controller: passwordController,
                 isObscureText: true,
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 8),
               AuthGradientButton(
                 buttonText: 'Sign Up',
                 onPressed: () {
@@ -73,7 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   }
                 },
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 8),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context, LoginPage.route());
