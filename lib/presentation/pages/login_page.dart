@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blog/core/theme/app_pallete.dart';
 import 'package:flutter_blog/presentation/pages/Signup_pages.dart';
 import 'package:flutter_blog/presentation/widgets/auth_field.dart';
-import 'package:flutter_blog/presentation/widgets/auth_gradient_button.dart';
+import 'package:flutter_blog/presentation/widgets/features/auth_gradient_button.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const LoginPage());

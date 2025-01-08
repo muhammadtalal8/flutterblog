@@ -7,7 +7,7 @@ class AppTheme {
           color: color,
           width: 3,
         ),
-borderRadius: BorderRadius.circular(5),
+borderRadius: BorderRadius.circular(10),
   );
   static final darkThemeMode = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppPallete.backgroundColor,

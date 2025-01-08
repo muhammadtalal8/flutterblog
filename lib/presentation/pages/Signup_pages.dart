@@ -6,7 +6,7 @@ import 'package:flutter_blog/core/theme/app_pallete.dart';
 import 'package:flutter_blog/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog/presentation/pages/login_page.dart';
 import 'package:flutter_blog/presentation/widgets/auth_field.dart';
-import 'package:flutter_blog/presentation/widgets/auth_gradient_button.dart';
+import 'package:flutter_blog/presentation/widgets/features/auth_gradient_button.dart';
 
 class SignUpPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const SignUpPage());
