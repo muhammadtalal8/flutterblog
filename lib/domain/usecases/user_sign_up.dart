@@ -1,14 +1,15 @@
 import 'package:flutter_blog/core/theme/error/failure.dart';
 import 'package:flutter_blog/core/usecase/usecase.dart';
+import 'package:flutter_blog/domain/entities/user.dart';
 import 'package:flutter_blog/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class UserSignup implements UserCase<String, UserSignupParams> {
+class UserSignup implements UserCase<User, UserSignupParams> {
   final AuthRepository authRepository;
 
   UserSignup(this.authRepository);
   @override
-  Future<Either<Failure, String>> call(UserSignupParams params) async {
+  Future<Either<Failure, User>> call(UserSignupParams params) async {
     return authRepository.signUpWithEmailPassword(
       name: params.name,
       email: params.email,
