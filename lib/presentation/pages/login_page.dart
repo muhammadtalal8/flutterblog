@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/theme/app_pallete.dart';
+import 'package:flutter_blog/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog/presentation/pages/Signup_pages.dart';
 import 'package:flutter_blog/presentation/widgets/auth_field.dart';
 import 'package:flutter_blog/presentation/widgets/features/auth_gradient_button.dart';
@@ -51,18 +52,20 @@ class _LoginPageState extends State<LoginPage> {
                 isObscureText: true,
               ),
               const SizedBox(height: 10),
-               AuthGradientButton(
-
+              AuthGradientButton(
                 buttonText: 'Sign In',
-              onPressed: () {
-                
-              },
+                onPressed: () {
+                  if(formKey.currentState!.validate()) {
+                    context.read<AuthBloc>().add(AuthLogin(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim()));
+                  }
+                },
               ),
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context, SignUpPage.route());
+                  Navigator.push(context, SignUpPage.route());
                 },
                 child: RichText(
                     text: TextSpan(

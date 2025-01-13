@@ -1,6 +1,6 @@
 import 'package:flutter_blog/core/theme/error/failure.dart';
 import 'package:fpdart/fpdart.dart';
 
-abstract interface class UserCase<SuccessType, Params >{
+abstract interface class UseCase<SuccessType, Params >{
 Future<Either<Failure, SuccessType >>call(Params params);
 }

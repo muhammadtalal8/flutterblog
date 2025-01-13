@@ -4,28 +4,22 @@ import 'package:flutter_blog/domain/entities/user.dart';
 import 'package:flutter_blog/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class UserSignup implements UseCase<User, UserSignupParams> {
+class UserLogin implements UseCase<User, UserLoginParams> {
   final AuthRepository authRepository;
-
-  UserSignup(this.authRepository);
+  const UserLogin(this.authRepository);
   @override
-  Future<Either<Failure, User>> call(UserSignupParams params) async {
-    return authRepository.signUpWithEmailPassword(
-      name: params.name,
-      email: params.email,
-      password: params.password,
-    );
+  Future<Either<Failure, User>> call(UserLoginParams params) async {
+    return await authRepository.loginWithEmailPassword(
+        email: params.email, password: params.password);
   }
 }
 
-class UserSignupParams {
+class UserLoginParams {
   final String email;
   final String password;
-  final String name;
 
-  UserSignupParams({
+  UserLoginParams({
     required this.email,
     required this.password,
-    required this.name,
   });
 }
