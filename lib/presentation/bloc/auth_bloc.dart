@@ -28,10 +28,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     Emitter<AuthState> emit,
   ) async {
     final res = await _currentUser(NoParams());
-    res.fold(
-      (l) => emit(AuthFailure(l.message)),
-      (r) => emit(AuthSuccess(r)),
-    );
+    res.fold((l) => emit(AuthFailure(l.message)), (r) {
+      print(r.email);
+      emit(AuthSuccess(r));
+    });
   }
 
   void _onAuthSignUp(
