@@ -41,6 +41,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'Talal Blog App Demo',
         theme: AppTheme.darkThemeMode,
-        home: const LoginPage());
+        home: const LoginPage(),
+        );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter_blog/domain/entities/user.dart';
+import 'package:flutter_blog/core/common/entities/user.dart';
 
 class UserModel extends User {
   UserModel({
