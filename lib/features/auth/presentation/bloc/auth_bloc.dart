@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/common/cubits/app_user/app_user_cubit.dart';
-import 'package:flutter_blog/domain/entities/user.dart';
-import 'package:flutter_blog/domain/usecases/curent_user.dart';
-import 'package:flutter_blog/domain/usecases/user_login.dart';
-import 'package:flutter_blog/domain/usecases/user_sign_up.dart';
+import 'package:flutter_blog/features/auth/domain/entities/user.dart';
+import 'package:flutter_blog/features/auth/domain/usecases/curent_user.dart';
+import 'package:flutter_blog/features/auth/domain/usecases/user_login.dart';
+import 'package:flutter_blog/features/auth/domain/usecases/user_sign_up.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

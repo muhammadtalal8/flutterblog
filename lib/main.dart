@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/common/cubits/app_user/app_user_cubit.dart';
 import 'package:flutter_blog/core/theme/theme.dart';
+import 'package:flutter_blog/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:flutter_blog/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter_blog/int_dependensies.dart';
-import 'package:flutter_blog/presentation/bloc/auth_bloc.dart';
-import 'package:flutter_blog/presentation/pages/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

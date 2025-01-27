@@ -3,10 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/common/widgets/loader.dart';
 import 'package:flutter_blog/core/theme/app_pallete.dart';
 import 'package:flutter_blog/core/utils/show_snakbar.dart';
-import 'package:flutter_blog/presentation/bloc/auth_bloc.dart';
-import 'package:flutter_blog/presentation/pages/Signup_pages.dart';
-import 'package:flutter_blog/presentation/widgets/auth_field.dart';
-import 'package:flutter_blog/features/auth_gradient_button.dart';
+import 'package:flutter_blog/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:flutter_blog/features/auth/presentation/pages/Signup_pages.dart';
+import 'package:flutter_blog/features/auth/presentation/widgets/auth_field.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const LoginPage());
@@ -71,8 +70,6 @@ class _LoginPageState extends State<LoginPage> {
                       if (formKey.currentState!.validate()) {
                         context.read<AuthBloc>().add(AuthLogin(
                             email: emailController.text.trim(),
-                            
-                            
                             password: passwordController.text.trim()));
                       }
                     },
