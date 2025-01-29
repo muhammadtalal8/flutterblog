@@ -42,6 +42,9 @@ dependencies:
   badges: ^3.1.2
   get_it: ^8.0.3
   cupertino_http: ^1.2.0
+  font_awesome_flutter: ^10.8.0
+  flutter_platform_widgets: ^5.0.0
+  flutter_cupertino_desktop_kit: ^0.0.10
 
 dev_dependencies:
   flutter_test:
