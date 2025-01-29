@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/common/widgets/loader.dart';
@@ -103,4 +105,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+  
+  AuthGradientButton({required String buttonText, required Null Function() onPressed}) {}
 }

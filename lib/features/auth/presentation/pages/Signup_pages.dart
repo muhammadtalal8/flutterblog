@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -114,3 +114,6 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 }
+
+AuthGradientButton(
+    {required String buttonText, required Null Function() onPressed}) {}
