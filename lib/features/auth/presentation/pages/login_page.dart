@@ -1,5 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_blog/core/common/widgets/loader.dart';
@@ -8,6 +6,7 @@ import 'package:flutter_blog/core/utils/show_snakbar.dart';
 import 'package:flutter_blog/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog/features/auth/presentation/pages/Signup_pages.dart';
 import 'package:flutter_blog/features/auth/presentation/widgets/auth_field.dart';
+import 'package:flutter_blog/features/auth/presentation/widgets/auth_gradient_button.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const LoginPage());
@@ -106,5 +105,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
   
-  AuthGradientButton({required String buttonText, required Null Function() onPressed}) {}
 }

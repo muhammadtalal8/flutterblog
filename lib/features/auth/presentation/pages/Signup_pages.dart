@@ -8,6 +8,7 @@ import 'package:flutter_blog/core/utils/show_snakbar.dart';
 import 'package:flutter_blog/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_blog/features/auth/presentation/pages/login_page.dart';
 import 'package:flutter_blog/features/auth/presentation/widgets/auth_field.dart';
+import 'package:flutter_blog/features/auth/presentation/widgets/auth_gradient_button.dart';
 
 class SignUpPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const SignUpPage());
@@ -115,5 +116,3 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 }
 
-AuthGradientButton(
-    {required String buttonText, required Null Function() onPressed}) {}
